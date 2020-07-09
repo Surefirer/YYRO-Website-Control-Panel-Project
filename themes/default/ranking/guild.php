@@ -1,5 +1,5 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Guild Ranking</h2>
+<h2>TOP 20 工会排行</h2>
 <h3>
 	Top <?php echo number_format($limit=(int)Flux::config('GuildRankingLimit')) ?> Guilds
 	on <?php echo htmlspecialchars($server->serverName) ?>
@@ -7,13 +7,13 @@
 <?php if ($guilds): ?>
 	<table class="horizontal-table">
 		<tr>
-			<th>Rank</th>
-			<th colspan="2">Guild Name</th>
-			<th>Guild Level</th>
-			<th>Castles Owned</th>
-			<th>Members</th>
-			<th>Average Level</th>
-			<th>Experience</th>
+			<th>排行</th>
+			<th colspan="2">工会名称</th>
+			<th>工会等级</th>
+			<th>拥有城堡</th>
+			<th>工会人数</th>
+			<th>平均等级</th>
+			<th>经验值</th>
 		</tr>
 		<?php for ($i = 0; $i < $limit; ++$i): ?>
 		<tr<?php if (!isset($guilds[$i])) echo ' class="empty-row"'; if ($i === 0) echo ' class="top-ranked" title="<strong>'.htmlspecialchars($guilds[$i]->name).'</strong> is the top ranked guild!"' ?>>

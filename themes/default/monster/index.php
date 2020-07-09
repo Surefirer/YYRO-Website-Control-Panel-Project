@@ -1,13 +1,13 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Monsters</h2>
-<p class="toggler"><a href="javascript:toggleSearchForm()">Search...</a></p>
+<h2>魔物</h2>
+<p class="toggler"><a href="javascript:toggleSearchForm()">搜索...</a></p>
 <form class="search-form" method="get">
 	<?php echo $this->moduleActionFormInputs($params->get('module')) ?>
 	<p>
-		<label for="monster_id">Monster ID:</label>
+		<label for="monster_id">魔物 ID:</label>
 		<input type="text" name="monster_id" id="monster_id" value="<?php echo htmlspecialchars($params->get('monster_id')) ?>" />
 		...
-		<label for="name">Name:</label>
+		<label for="name">名称:</label>
 		<input type="text" name="name" id="name" value="<?php echo htmlspecialchars($params->get('name')) ?>" />
 		...
 		<label for="mvp">MVP:</label>
@@ -18,7 +18,7 @@
 		</select>
 	</p>
 	<p>
-		<label for="size">Size:</label>
+		<label for="size">大小:</label>
 		<select name="size">
 			<option value="-1"<?php if (($size=$params->get('size')) === '-1') echo ' selected="selected"' ?>>
 				Any
@@ -30,7 +30,7 @@
 			<?php endforeach ?>
 		</select>
 		...
-		<label for="race">Race:</label>
+		<label for="race">种族:</label>
 		<select name="race">
 			<option value="-1"<?php if (($race=$params->get('race')) === '-1') echo ' selected="selected"' ?>>
 				Any
@@ -42,7 +42,7 @@
 			<?php endforeach ?>
 		</select>
 		...
-		<label for="element">Element:</label>
+		<label for="element">属性:</label>
 		<select name="element">
 			<option value="-1"<?php if (($element=$params->get('element')) === '-1') echo ' selected="selected"' ?>>
 				Any
@@ -60,7 +60,7 @@
 		</select>
 	</p>
 	<p>
-		<label for="card_id">Card ID:</label>
+		<label for="card_id">卡片 ID:</label>
 		<input type="text" name="card_id" id="card_id" value="<?php echo htmlspecialchars($params->get('card_id')) ?>" />
 		...
 		<label for="custom">Custom:</label>
@@ -78,17 +78,17 @@
 <?php echo $paginator->infoText() ?>
 <table class="horizontal-table">
 	<tr>
-		<th><?php echo $paginator->sortableColumn('monster_id', 'Monster ID') ?></th>
-		<th><?php echo $paginator->sortableColumn('kro_name', 'kRO Name') ?></th>
-		<th><?php echo $paginator->sortableColumn('iro_name', 'iRO Name') ?></th>
-		<th><?php echo $paginator->sortableColumn('level', 'Level') ?></th>
+		<th><?php echo $paginator->sortableColumn('monster_id', '魔物 ID') ?></th>
+		<th><?php echo $paginator->sortableColumn('kro_name', 'kRO 名称') ?></th>
+		<th><?php echo $paginator->sortableColumn('iro_name', 'iRO 名称') ?></th>
+		<th><?php echo $paginator->sortableColumn('level', '等级') ?></th>
 		<th><?php echo $paginator->sortableColumn('hp', 'HP') ?></th>
-		<th><?php echo $paginator->sortableColumn('size', 'Size') ?></th>
-		<th><?php echo $paginator->sortableColumn('race', 'Race') ?></th>
-		<th>Element</th>
+		<th><?php echo $paginator->sortableColumn('size', '大小') ?></th>
+		<th><?php echo $paginator->sortableColumn('race', '种族') ?></th>
+		<th>属性</th>
 		<th><?php echo $paginator->sortableColumn('exp', 'Base EXP') ?></th>
 		<th><?php echo $paginator->sortableColumn('jexp', 'Job EXP') ?></th>
-		<th><?php echo $paginator->sortableColumn('dropcard_id', 'Card ID') ?></th>
+		<th><?php echo $paginator->sortableColumn('dropcard_id', '卡片 ID') ?></th>
 		<th><?php echo $paginator->sortableColumn('origin_table', 'Custom') ?></th>
 	</tr>
 	<?php foreach ($monsters as $monster): ?>

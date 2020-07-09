@@ -1,5 +1,5 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Homunculus Ranking</h2>
+<h2>TOP 20 生命体排行</h2>
 <h3>
 	Top <?php echo number_format($limit=(int)Flux::config('HomunRankingLimit')) ?> Homunculi
 	<?php if (!is_null($homunClass)): ?>
@@ -28,12 +28,12 @@
 </form>
 <table class="horizontal-table">
 	<tr>
-		<th>Rank</th>
-		<th>Homunculus</th>
-		<th>Owner Name</th>
-		<th>Intimacy</th>
-		<th>Level</th>
-		<th>Experience</th>
+		<th>排行</th>
+		<th>生命体</th>
+		<th>主人</th>
+		<th>亲密度</th>
+		<th>等级</th>
+		<th>经验值</th>
 	</tr>
 	<?php $topRankType = !is_null($homunClass) ? $className : 'homunculus' ?>
 	<?php for ($i = 0; $i < $limit; ++$i): ?>

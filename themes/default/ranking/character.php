@@ -1,5 +1,5 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Character Ranking</h2>
+<h2>TOP 20 角色排行</h2>
 <h3>
 	Top <?php echo number_format($limit=(int)Flux::config('CharRankingLimit')) ?> Characters
 	<?php if (!is_null($jobClass)): ?>
@@ -28,14 +28,14 @@
 </form>
 <table class="horizontal-table">
 	<tr>
-		<th>Rank</th>
-		<th>Character Name</th>
-		<th>Job Class</th>
-		<th colspan="2">Guild Name</th>
-		<th>Base Level</th>
-		<th>Job Level</th>
-		<th>Base Experience</th>
-		<th>Job Experience</th>
+		<th>排行</th>
+		<th>角色名称</th>
+		<th>职业</th>
+		<th colspan="2">所属工会</th>
+		<th>基础等级</th>
+		<th>职业等级</th>
+		<th>基础经验值</th>
+		<th>职业经验值</th>
 	</tr>
 	<?php $topRankType = !is_null($jobClass) ? $className : 'character' ?>
 	<?php for ($i = 0; $i < $limit; ++$i): ?>

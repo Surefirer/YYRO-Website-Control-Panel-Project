@@ -1,15 +1,15 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Viewing Monster</h2>
+<h2>查看魔物</h2>
 <?php if ($monster): ?>
 <h3>
-	#<?php echo $monster->monster_id ?>: <?php echo htmlspecialchars($monster->iro_name) ?>
+	#<?php echo $monster->monster_id ?>: <?php echo htmlspecialchars($monster->kro_name) ?>
 	<?php if ($monster->mvp_exp): ?>
 		<span class="mvp">(MVP)</span>
 	<?php endif ?>
 </h3>
 <table class="vertical-table">
 	<tr>
-		<th>Monster ID</th>
+		<th>魔物 ID</th>
 		<td><?php echo $monster->monster_id ?></td>
 		<?php if ($image=$this->monsterImage($monster->monster_id)): ?>
 		<td rowspan="12" style="width:150px; text-align: center; vertical-alignment: middle">
@@ -20,7 +20,7 @@
 		<td><?php echo htmlspecialchars($monster->sprite) ?></td>
 	</tr>
 	<tr>
-		<th>kRO Name</th>
+		<th>kRO 名称</th>
 		<td><?php echo htmlspecialchars($monster->kro_name) ?></td>
 		<th>Custom</th>
 		<td>
@@ -32,13 +32,13 @@
 		</td>
 	</tr>
 	<tr>
-		<th>iRO Name</th>
+		<th>iRO 名称</th>
 		<td><?php echo htmlspecialchars($monster->iro_name) ?></td>
 		<th>HP</th>
 		<td><?php echo number_format($monster->hp) ?></td>
 	</tr>
 	<tr>
-		<th>Size</th>
+		<th>体型</th>
 		<td>
 			<?php if ($size=Flux::monsterSizeName($monster->size)): ?>
 				<?php echo htmlspecialchars($size) ?>
@@ -50,7 +50,7 @@
 		<td><?php echo number_format($monster->sp) ?></td>
 	</tr>
 	<tr>
-		<th>Race</th>
+		<th>种族</th>
 		<td>
 			<?php if ($race=Flux::monsterRaceName($monster->race)): ?>
 				<?php echo htmlspecialchars($race) ?>
@@ -58,37 +58,37 @@
 				<span class="not-applicable">Unknown</span>
 			<?php endif ?>	
 		</td>
-		<th>Level</th>
+		<th>等级</th>
 		<td><?php echo number_format($monster->level) ?></td>
 	</tr>
 	<tr>
-		<th>Element</th>
+		<th>属性</th>
 		<td><?php echo Flux::elementName($monster->element_type) ?> (Lv <?php echo floor($monster->element_level) ?>)</td>
-		<th>Speed</th>
+		<th>移动速度</th>
 		<td><?php echo number_format($monster->speed) ?></td>
 	</tr>
 	<tr>
-		<th>Experience</th>
+		<th>基本经验值</th>
 		<td><?php echo number_format($monster->base_exp) ?></td>
 		<th>Attack</th>
 		<td><?php echo number_format($monster->attack1) ?>~<?php echo number_format($monster->attack2) ?></td>
 	</tr>
 	<tr>
-		<th>Job Experience</th>
+		<th>职业经验值</th>
 		<td><?php echo number_format($monster->job_exp) ?></td>
-		<th>Defense</th>
+		<th>防御</th>
 		<td><?php echo number_format($monster->defense) ?></td>
 	</tr>
 	<tr>
-		<th>MVP Experience</th>
+		<th>MVP 经验值</th>
 		<td><?php echo number_format($monster->mvp_exp) ?></td>
-		<th>Magic Defense</th>
+		<th>魔法防御</th>
 		<td><?php echo number_format($monster->magic_defense) ?></td>
 	</tr>
 	<tr>
-		<th>Attack Delay</th>
+		<th>攻击延迟</th>
 		<td><?php echo number_format($monster->attack_delay) ?> ms</td>
-		<th>Attack Range</th>
+		<th>攻击范围</th>
 		<td><?php echo number_format($monster->range1) ?></td>
 	</tr>
 	<tr>
@@ -100,7 +100,7 @@
 	<tr>
 		<th>Delay Motion</th>
 		<td><?php echo number_format($monster->delay_motion) ?> ms</td>
-		<th>Vision Range</th>
+		<th>可见范围</th>
 		<td><?php echo number_format($monster->range3) ?></td>
 	</tr>
 	<tr>
@@ -114,7 +114,7 @@
 		</td>
 	</tr>
 	<tr>
-		<th>Monster Stats</th>
+		<th>魔物属性</th>
 		<td colspan="<?php echo $image ? 4 : 3 ?>">
 			<table class="character-stats">
 				<tr>
@@ -138,13 +138,13 @@
 	</tr>
 </table>
 
-<h3><?php echo htmlspecialchars($monster->iro_name) ?> Item Drops</h3>
+<h3><?php echo htmlspecialchars($monster->kro_name) ?> 掉落道具</h3>
 <?php if ($itemDrops): ?>
 <table class="vertical-table">
 	<tr>
-		<th>Item ID</th>
-		<th colspan="2">Item Name</th>
-		<th>Drop Chance</th>
+		<th>物品 ID</th>
+		<th colspan="2">物品名称</th>
+		<th>掉率</th>
 	</tr>
 	<?php $mvpDrops = 0; ?>
 	<?php foreach ($itemDrops as $itemDrop): ?>
@@ -187,10 +187,10 @@
 	<?php endif ?>
 </table>
 <?php else: ?>
-<p>No item drops found for <?php echo htmlspecialchars($monster->iro_name) ?>.</p>
+<p>No item drops found for <?php echo htmlspecialchars($monster->kro_name) ?>.</p>
 <?php endif ?>
 
-<h3>Monster Skills for “<?php echo htmlspecialchars($monster->iro_name) ?>”</h3>
+<h3> “<?php echo htmlspecialchars($monster->kro_name) ?>”会使用的技能</h3>
 <?php if ($mobSkills): ?>
 <table class="vertical-table">
 	<tr>
@@ -227,7 +227,7 @@
 	<?php endforeach ?>
 </table>
 <?php else: ?>
-<p>No skills found for <?php echo htmlspecialchars($monster->iro_name) ?>.</p>
+<p>No skills found for <?php echo htmlspecialchars($monster->kro_name) ?>.</p>
 <?php endif ?>
 
 <?php else: ?>

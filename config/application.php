@@ -303,9 +303,9 @@ return array(
 		),
 		'account'		=> array(
 			'index'			=> 'List Accounts',
-			'view'			=> 'View Account',
-			'changepass'	=> 'Change Password',
-			'changemail'	=> 'Change E-mail',
+			'view'			=> '账号信息',
+			'changepass'	=> '修改密码',
+			'changemail'	=> '修改E-mail',
 			'changesex'		=> 'Change Gender',
 			'transfer'		=> 'Transfer Credits',
 			'xferlog'		=> 'Credit Transfer History',
@@ -364,13 +364,13 @@ return array(
 			'add'			=> 'Add IP Ban'
 		),
 		'ranking'		=> array(
-			'character'		=> 'Characters',
-			'death'			=> 'Deaths',
-			'alchemist'		=> 'Alchemists',
-			'blacksmith'	=> 'Blacksmiths',
-			'homunculus'	=> 'Homunculus',
+			'character'		=> '角色',
+			'death'			=> '死亡',
+			'alchemist'		=> '炼金术士',
+			'blacksmith'	=> '铁匠',
+			'homunculus'	=> '生命体',
 			'mvp'			=> 'MVPs',
-			'guild'			=> 'Guilds',
+			'guild'			=> '工会',
 			'zeny'			=> 'Zeny'
 		),
 		'item'			=> array(

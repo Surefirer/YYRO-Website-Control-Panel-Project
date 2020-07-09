@@ -59,7 +59,7 @@ if ($item) {
 	}
 	$mobTable   = new Flux_TemporaryTable($server->connection, $mobDB, $fromTables);
 
-	$col  = 'ID AS monster_id, iName AS monster_name, LV AS monster_level, ';
+	$col  = 'ID AS monster_id, kName AS monster_name, LV AS monster_level, ';
 	$col .= 'Race AS monster_race, (Element%10) AS monster_element, (Element/20) AS monster_ele_lv, MEXP AS mvp_exp, ';
 
 	// Normal drops.

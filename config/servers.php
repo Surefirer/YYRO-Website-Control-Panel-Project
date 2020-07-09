@@ -37,7 +37,7 @@ return array(
 			'Hostname'   => '127.0.0.1',
 			'Username'   => 'root',
 			'Password'   => 'root',
-			'Database'   => 'ragnarok',
+			'Database'   => 'ragnarok_logs',
 			'Persistent' => true,
 			'Timezone'   => null // Possible values is as described in the comment in DbConfig.
 		),
@@ -97,7 +97,7 @@ return array(
 				// Fourth (final) parameter: Ending hour in 24-hr format.
 				// ** (Note, invalid times are ignored silently.)
 				'WoeDayTimes'   => array(
-					//array(0, '12:00', 0, '14:00'), // Example: Starts Sunday 12:00 PM and ends Sunday 2:00 PM
+					array(5, '22:00', 5, '23:00'), // Example: Starts Sunday 12:00 PM and ends Sunday 2:00 PM
 					//array(3, '14:00', 3, '15:00')  // Example: Starts Wednesday 2:00 PM and ends Wednesday 3:00 PM
 				),
 				// Modules and/or actions to disallow access to during WoE.

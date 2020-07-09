@@ -1,5 +1,5 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Death Ranking</h2>
+<h2>TOP 20 死亡排行</h2>
 <h3>
 	Top <?php echo number_format($limit=(int)Flux::config('DeathRankingLimit')) ?> Most Killed Characters
 	<?php if (!is_null($jobClass)): ?>
@@ -28,13 +28,13 @@
 </form>
 <table class="horizontal-table">
 	<tr>
-		<th>Rank</th>
-		<th>Character Name</th>
-		<th>Deaths</th>
-		<th>Job Class</th>
-		<th>Base Level</th>
-		<th>Job Level</th>
-		<th colspan="2">Guild Name</th>
+		<th>排行</th>
+		<th>角色名称</th>
+		<th>死亡次数</th>
+		<th>职业</th>
+		<th>基础等级</th>
+		<th>职业等级</th>
+		<th colspan="2">所属工会</th>
 	</tr>
 	<?php $topRankType = !is_null($jobClass) ? $className : 'character' ?>
 	<?php for ($i = 0; $i < $limit; ++$i): ?>

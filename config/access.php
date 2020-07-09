@@ -41,7 +41,7 @@ return array(
 		'account'   => array(
 			'index'    => AccountLevel::LOWGM,
 			'view'     => AccountLevel::NORMAL,
-			'create'   => AccountLevel::UNAUTH,
+			'create'   => AccountLevel::ADMIN,
 			'login'    => AccountLevel::UNAUTH,
 			'logout'   => AccountLevel::NORMAL,
 			'transfer' => AccountLevel::NORMAL,
@@ -61,12 +61,12 @@ return array(
 		'character'	=> array(
 			'index'			=> AccountLevel::LOWGM,
 			'view'			=> AccountLevel::NORMAL,
-			'online'		=> AccountLevel::ANYONE,
-			'prefs'			=> AccountLevel::NORMAL,
+			'online'		=> AccountLevel::ADMIN,
+			'prefs'			=> AccountLevel::ADMIN,
 			'changeslot'	=> AccountLevel::NORMAL,
 			'resetlook'		=> AccountLevel::NORMAL,
 			'resetpos'		=> AccountLevel::NORMAL,
-			'mapstats'		=> AccountLevel::ANYONE,
+			'mapstats'		=> AccountLevel::ADMIN,
 			'divorce'		=> AccountLevel::NORMAL
 		),
 		'guild'		=> array(
@@ -93,7 +93,7 @@ return array(
 			'swordman'		=> AccountLevel::ANYONE,
 			'bowman'		=> AccountLevel::ANYONE,
 			'spearman'		=> AccountLevel::ANYONE,
-			'mvp'       	=> AccountLevel::ANYONE,
+			'mvp'       	=> AccountLevel::ADMIN,
 		),
 		'item'		=> array(
 			'index'			=> AccountLevel::ANYONE,

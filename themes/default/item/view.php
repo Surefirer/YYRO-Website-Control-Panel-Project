@@ -19,11 +19,11 @@
 		<td>
 			<?php if ($item->cost): ?>
 				<span class="for-sale yes">
-					Yes
+					是
 				</span>
 			<?php else: ?>
 				<span class="for-sale no">
-					No
+					否
 				</span>
 			<?php endif ?>
 		</td>
@@ -41,19 +41,19 @@
 		</td>
 	</tr>
 	<tr>
-		<th>Name</th>
+		<th>名称</th>
 		<td><?php echo htmlspecialchars($item->name) ?></td>
-		<th>Type</th>
+		<th>类别</th>
 		<td><?php echo $this->itemTypeText($item->type, $item->view) ?></td>
 	</tr>
 	<tr>
-		<th>NPC Buy</th>
+		<th>买价</th>
 		<td><?php echo number_format((int)$item->price_buy) ?></td>
-		<th>Weight</th>
+		<th>重量</th>
 		<td><?php echo round($item->weight, 1) ?></td>
 	</tr>
 	<tr>
-		<th>NPC Sell</th>
+		<th>卖价</th>
 		<td>
 			<?php if (is_null($item->price_sell) && $item->price_buy): ?>
 				<?php echo number_format(floor($item->price_buy / 2)) ?>
@@ -61,38 +61,38 @@
 				<?php echo number_format((int)$item->price_sell) ?>
 			<?php endif ?>
 		</td>
-		<th>Weapon Level</th>
+		<th>武器等级</th>
 		<td><?php echo number_format((int)$item->weapon_level) ?></td>
 	</tr>
 	<tr>
-		<th>Range</th>
+		<th>范围</th>
 		<td><?php echo number_format((int)$item->range) ?></td>
-		<th>Defense</th>
+		<th>防御</th>
 		<td><?php echo number_format((int)$item->defence) ?></td>
 	</tr>
 	<tr>
-		<th>Slots</th>
+		<th>洞数</th>
 		<td><?php echo number_format((int)$item->slots) ?></td>
-		<th>Refineable</th>
+		<th>精炼</th>
 		<td>
 			<?php if ($item->refineable): ?>
-				Yes
+				是
 			<?php else: ?>
-				No
+				否
 			<?php endif ?>
 		</td>
 	</tr>
 	<tr>
 		<th>Attack</th>
 		<td><?php echo number_format((int)$item->attack) ?></td>
-		<th>Min Equip Level</th>
+		<th>最低装备等级</th>
 		<td><?php echo number_format((int)$item->equip_level_min) ?></td>
 	</tr>
 	<?php if($server->isRenewal): ?>
 	<tr>
 		<th>MATK</th>
 		<td><?php echo number_format((int)$item->matk) ?></td>
-		<th>Max Equip Level</th>
+		<th>最高装备等级</th>
 		<td>
 			<?php if ($item->equip_level_max == 0): ?>
 				<span class="not-applicable">None</span>
@@ -103,7 +103,7 @@
 	</tr>
 	<?php endif ?>
 	<tr>
-		<th>Equip Locations</th>
+		<th>装备位置</th>
 		<td colspan="<?php echo $image ? 4 : 3 ?>">
 			<?php if ($locs=$this->equipLocations($item->equip_locations)): ?>
 				<?php echo htmlspecialchars(implode(' + ', $locs)) ?>
@@ -123,7 +123,7 @@
 		</td>
 	</tr>
 	<tr>
-		<th>Equippable Jobs</th>
+		<th>适合职业</th>
 		<td colspan="<?php echo $image ? 4 : 3 ?>">
 			<?php if ($jobs=$this->equippableJobs($item->equip_jobs)): ?>
 				<?php echo htmlspecialchars(implode(' / ', $jobs)) ?>
@@ -133,7 +133,7 @@
 		</td>
 	</tr>
 	<tr>
-		<th>Equip Gender</th>
+		<th>适合性别</th>
 		<td colspan="<?php echo $image ? 4 : 3 ?>">
 			<?php if ($item->equip_genders === '0'): ?>
 				Female
@@ -150,7 +150,7 @@
 	<?php endif ?>
     <?php if(Flux::config('ShowItemDesc')):?>
 	<tr>
-		<th>Description</th>
+		<th>描述</th>
 		<td colspan="<?php echo $image ? 4 : 3 ?>">
 			<?php if($item->itemdesc): ?>
                 <?php echo $item->itemdesc ?>
