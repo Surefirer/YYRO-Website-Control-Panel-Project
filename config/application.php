@@ -22,7 +22,7 @@ return array(
 	'EmblemCacheInterval'		=> 12,						// Hourly interval to re-cache guild emblems (set to 0 to disable emblem cache).
 	'SessionCookieExpire'		=> 48,						// Duration in hours.
 	'AdminMenuGroupLevel'		=> AccountLevel::LOWGM,		// The starting group ID for which module actions are moved into the admin menu for display.
-	'DateDefaultTimezone'		=> 'UTC',					// The default timezone, consult the PHP manual for valid timezones: http://php.net/timezones (null for defaut system TZ)
+	'DateDefaultTimezone'		=> 'Asia/Shanghai',					// The default timezone, consult the PHP manual for valid timezones: http://php.net/timezones (null for defaut system TZ)
 	'DateFormat'				=> 'Y-m-d',					// Default DATE format to be displayed in pages.
 	'DateTimeFormat'			=> 'Y-m-d H:i:s',			// Default DATETIME format to be displayed in pages.
 	'ShowSinglePage'			=> true,					// Whether or not to show the page numbers even if there's only one page.
@@ -195,7 +195,7 @@ return array(
 	'CpChangeLogShowPassword'	=> false,					// Show password in CP "password changes" log (also see access.php's SeeCpChangePass).
 
 	'AdminMenuNewStyle'			=> true,					// Use new-style admin menu;  Applies to 'default' theme.
-	'EnablePeakDisplay'			=> true,					// Display Peak User count on Server Status page.
+	'EnablePeakDisplay'			=> false,					// Display Peak User count on Server Status page.
 	
 	
 // News Options

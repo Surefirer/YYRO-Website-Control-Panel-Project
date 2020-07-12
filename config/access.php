@@ -10,7 +10,7 @@ return array(
 			'*'        => AccountLevel::ANYONE
 		),
 		'donate'    => array(
-			'index'    => AccountLevel::ANYONE,
+			'index'    => AccountLevel::ADMIN,
 			'notify'   => AccountLevel::ANYONE,
 			'update'   => AccountLevel::ANYONE,
 			'complete' => AccountLevel::ANYONE,
@@ -18,7 +18,7 @@ return array(
 			'trusted'  => AccountLevel::NORMAL
 		),
 		'purchase'  => array(
-			'index'    => AccountLevel::ANYONE,
+			'index'    => AccountLevel::ADMIN,
 			'add'      => AccountLevel::ANYONE,
 			'clear'    => AccountLevel::NORMAL,
 			'cart'     => AccountLevel::NORMAL,
@@ -88,7 +88,7 @@ return array(
 			'character'		=> AccountLevel::ANYONE,
 			'guild'			=> AccountLevel::ANYONE,
 			'zeny'			=> AccountLevel::ADMIN,
-			'death'			=> AccountLevel::ANYONE,
+			'death'			=> AccountLevel::ADMIN,
 			'homun'			=> AccountLevel::ANYONE,
 			'swordman'		=> AccountLevel::ANYONE,
 			'bowman'		=> AccountLevel::ANYONE,

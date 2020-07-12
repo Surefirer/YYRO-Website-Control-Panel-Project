@@ -9,15 +9,15 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Name</th>
-                    <th>Refine</th>
-                    <th>Slot</th>
-                    <th>Card0</th>
-                    <th>Card1</th>
-                    <th>Card2</th>
-                    <th>Card3</th>
-                    <th>Price</th>
-                    <th>Amount</th>
+                    <th>名称</th>
+                    <th>精炼</th>
+                    <th>洞</th>
+                    <th>卡槽0</th>
+                    <th>卡槽1</th>
+                    <th>卡槽2</th>
+                    <th>卡槽3</th>
+                    <th>售价</th>
+                    <th>库存</th>
                 </tr>
             </thead>
             <tbody>

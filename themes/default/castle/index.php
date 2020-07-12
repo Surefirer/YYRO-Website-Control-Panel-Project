@@ -1,12 +1,12 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Castles</h2>
-<p>This page shows what castles are activated and which guilds own them.</p>
+<h2>城堡</h2>
+<p>该页显示激活的城堡以及城堡的拥有者。</p>
 <?php if ($castles): ?>
 <table class="vertical-table">
 	<tr>
-		<th>Castle ID</th>
-		<th>Castle</th>
-		<th colspan="2">Guild</th>
+		<th>城堡 ID</th>
+		<th>城堡</th>
+		<th colspan="2">所属工会</th>
 	</tr>
 	<?php foreach ($castles as $castle): ?>
 		<tr>

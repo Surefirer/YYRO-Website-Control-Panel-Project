@@ -29,18 +29,6 @@
 		</td>
 	</tr>
 	<tr>
-		<th>Identifier</th>
-		<td><?php echo htmlspecialchars($item->identifier) ?></td>
-		<th>Credit Price</th>
-		<td>
-			<?php if ($item->cost): ?>
-				<?php echo number_format((int)$item->cost) ?>
-			<?php else: ?>
-				<span class="not-applicable">Not For Sale</span>
-			<?php endif ?>
-		</td>
-	</tr>
-	<tr>
 		<th>名称</th>
 		<td><?php echo htmlspecialchars($item->name) ?></td>
 		<th>类别</th>
@@ -113,16 +101,6 @@
 		</td>
 	</tr>
 	<tr>
-		<th>Equip Upper</th>
-		<td colspan="<?php echo $image ? 4 : 3 ?>">
-			<?php if ($upper=$this->equipUpper($item->equip_upper)): ?>
-				<?php echo htmlspecialchars(implode(' / ', $upper)) ?>
-			<?php else: ?>
-				<span class="not-applicable">None</span>
-			<?php endif ?>
-		</td>
-	</tr>
-	<tr>
 		<th>适合职业</th>
 		<td colspan="<?php echo $image ? 4 : 3 ?>">
 			<?php if ($jobs=$this->equippableJobs($item->equip_jobs)): ?>
@@ -136,11 +114,11 @@
 		<th>适合性别</th>
 		<td colspan="<?php echo $image ? 4 : 3 ?>">
 			<?php if ($item->equip_genders === '0'): ?>
-				Female
+				女
 			<?php elseif ($item->equip_genders === '1'): ?>
-				Male
+				男
 			<?php elseif ($item->equip_genders === '2'): ?>
-				Both (Male and Female)
+				两者 (男和女)
 			<?php else: ?>
 				<span class="not-applicable">Unknown</span>
 			<?php endif ?>

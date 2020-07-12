@@ -4,7 +4,7 @@
 <form class="search-form" method="get">
 	<?php echo $this->moduleActionFormInputs($params->get('module')) ?>
 	<p>
-		<label for="item_id">Item ID:</label>
+		<label for="item_id">道具 ID:</label>
 		<input type="text" name="item_id" id="item_id" value="<?php echo htmlspecialchars($params->get('item_id')) ?>" />
 		...
 		<label for="name">名称:</label>

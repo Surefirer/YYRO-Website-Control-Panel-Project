@@ -9,9 +9,9 @@
 			<thead>
 				<tr>
 					<th>ID</th>
-					<th>Name</th>
-					<th>Price</th>
-					<th>Amount</th>
+					<th>名称</th>
+					<th>价钱</th>
+					<th>数量</th>
 				</tr>
 			</thead>
 			<tbody>

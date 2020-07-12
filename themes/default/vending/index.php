@@ -1,18 +1,18 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Vendors</h2>
+<h2>商店</h2>
 
 <?php if ($vendings): ?>
     <?php echo $paginator->infoText() ?>
     <table class="horizontal-table">
         <thead>
             <tr>
-                <th><?php echo $paginator->sortableColumn('id', 'Vendor ID') ?></th>
-                <th> <?php echo $paginator->sortableColumn('char_name', 'Vendor Name') ?></th>
-                <th>Title</th>
-                <th><?php echo $paginator->sortableColumn('map', 'Map') ?></th>
+                <th><?php echo $paginator->sortableColumn('id', 'ID') ?></th>
+                <th> <?php echo $paginator->sortableColumn('char_name', '店主') ?></th>
+                <th>店名</th>
+                <th><?php echo $paginator->sortableColumn('map', '地图') ?></th>
                 <th>X</th>
                 <th>Y</th>
-                <th>Gender</th>
+                <th>性别</th>
             </tr>
         </thead>
         <tbody>
