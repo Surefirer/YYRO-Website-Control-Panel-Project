@@ -92,7 +92,7 @@
 			</script>
 		<?php endif ?>
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				var inputs = 'input[type=text],input[type=password],input[type=file]';

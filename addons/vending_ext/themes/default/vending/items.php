@@ -1,6 +1,6 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
 <h2><?php echo htmlspecialchars($title); ?></h2>
-<p class="toggler"><a href="javascript:toggleSearchForm()">Search...</a></p>
+<p class="toggler"><a href="javascript:toggleSearchForm()">搜索...</a></p>
 <form class="search-form" method="get">
 	<?php echo $this->moduleActionFormInputs($params->get('module'), $params->get('action')); ?>
     <p>
@@ -16,16 +16,16 @@
     <table class="horizontal-table">
         <thead>
             <tr>
-                <th><?php echo $paginator->sortableColumn('title', 'Shop'); ?></th>
-                <th><?php echo $paginator->sortableColumn('merchant', 'Merchant'); ?></th>
-                <th>Position</th>
-                <th><?php echo $paginator->sortableColumn('item_name', 'Item Name'); ?></th>
-                <th>Card0</th>
-                <th>Card1</th>
-                <th>Card2</th>
-                <th>Card3</th>
-                <th>Price</th>
-                <th>Amount</th>
+                <th><?php echo $paginator->sortableColumn('title', '店名'); ?></th>
+                <th><?php echo $paginator->sortableColumn('merchant', '店主'); ?></th>
+                <th>位置</th>
+                <th><?php echo $paginator->sortableColumn('item_name', '道具名称'); ?></th>
+                <th>卡槽0</th>
+                <th>卡槽1</th>
+                <th>卡槽2</th>
+                <th>卡槽3</th>
+                <th>售价</th>
+                <th>库存</th>
             </tr>
         </thead>
         <tbody>

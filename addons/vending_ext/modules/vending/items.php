@@ -5,7 +5,7 @@ if (!defined('FLUX_ROOT')) {
 
 require_once 'Flux/TemporaryTable.php';
 
-$title = "Items for Sale";
+$title = "出售中的道具";
 
 try {
     if ($server->isRenewal) {

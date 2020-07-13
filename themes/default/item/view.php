@@ -1,5 +1,5 @@
 <?php if (!defined('FLUX_ROOT')) exit; ?>
-<h2>Viewing Item</h2>
+<h2>查看道具</h2>
 <?php if ($item): ?>
 <?php $icon = $this->iconImage($item->item_id); ?>
 <h3>
@@ -8,7 +8,7 @@
 </h3>
 <table class="vertical-table">
 	<tr>
-		<th>Item ID</th>
+		<th>道具 ID</th>
 		<td><?php echo htmlspecialchars($item->item_id) ?></td>
 		<?php if ($image=$this->itemImage($item->item_id)): ?>
 		<td rowspan="<?php echo ($server->isRenewal)?9:8 ?>" style="width: 150px; text-align: center; vertical-alignment: middle">
@@ -141,15 +141,15 @@
     
 </table>
 <?php if ($itemDrops): ?>
-<h3><?php echo htmlspecialchars($item->name) ?> Dropped By</h3>
+<h3><?php echo htmlspecialchars($item->name) ?> 掉落</h3>
 <table class="vertical-table">
 	<tr>
-		<th>Monster ID</th>
-		<th>Monster Name</th>
-		<th><?php echo htmlspecialchars($item->name) ?> Drop Chance</th>
-		<th>Monster Level</th>
-		<th>Monster Race</th>
-		<th>Monster Element</th>
+		<th>魔物 ID</th>
+		<th>魔物名称</th>
+		<th><?php echo htmlspecialchars($item->name) ?> 掉率</th>
+		<th>魔物等级</th>
+		<th>魔物种族</th>
+		<th>魔物属性</th>
 	</tr>
 	<?php foreach ($itemDrops as $itemDrop): ?>
 	<tr class="item-drop-<?php echo $itemDrop['type'] ?>">

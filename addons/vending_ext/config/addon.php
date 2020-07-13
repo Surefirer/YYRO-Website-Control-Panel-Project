@@ -3,7 +3,7 @@
 return array(
     'SubMenuItems' => array(
         'vending' => array(
-            'items' => 'List Items'
+            'items' => '搜索道具'
         )
     ),
 );
